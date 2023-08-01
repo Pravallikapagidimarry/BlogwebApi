@@ -9,8 +9,11 @@ namespace BlogWebAPI.Context
 {
     public class DatabaseContext : DbContext
     {
-        public DatabaseContext() : base("DefaultConnection") { }
-       // public BlogContext(DbContextOptions<BlogContext> options) : base(options) { }
+        public DatabaseContext() : base("DefaultConnection")
+        {
+            Database.SetInitializer<DatabaseContext>(new CreateDatabaseIfNotExists<DatabaseContext>());
+        }
+        // public BlogContext(DbContextOptions<BlogContext> options) : base(options) { }
 
         public DbSet<BlogPost> BlogPosts { get; set; }
 

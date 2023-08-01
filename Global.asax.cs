@@ -17,8 +17,8 @@ namespace BlogWebAPI
         {
 
 
-            GlobalConfiguration.Configure(WebApiConfig.Register);
-            Database.SetInitializer<DatabaseContext>(new DropCreateDatabaseIfModelChanges<DatabaseContext>());
+            //GlobalConfiguration.Configure(WebApiConfig.Register);
+            //Database.SetInitializer<DatabaseContext>(new DropCreateDatabaseIfModelChanges<DatabaseContext>());
 
             AreaRegistration.RegisterAllAreas();
             GlobalConfiguration.Configure(WebApiConfig.Register);

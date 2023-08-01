@@ -191,15 +191,18 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Context\DatabaseContext.cs" />
-    <Compile Include="Context\DatabaseInitializer.cs" />
+    <Compile Include="Controllers\BlogController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\SetupController.cs" />
     <Compile Include="Controllers\UserController.cs" />
-    <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="Extensions\OwinContextExtensions.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202308010707099_Initial.cs" />
+    <Compile Include="Migrations\202308010707099_Initial.designer.cs">
+      <DependentUpon>202308010707099_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Author.cs" />
     <Compile Include="Models\BlogPost.cs" />
     <Compile Include="Models\User.cs" />
@@ -228,6 +231,7 @@
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="ReadMe.txt" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -348,6 +352,11 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202308010707099_Initial.resx">
+      <DependentUpon>202308010707099_Initial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
