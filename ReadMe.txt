@@ -25,6 +25,19 @@ Microsoft.AspNet.WebApi.Owin
  3.Update-Database :-This step will create the database.
 
  The sample json for the Post man 
+
+ https://localhost:44302/api/user
+ {
+    "Id": 1,
+    "Name": "Pravallika",
+    "Email": "Pravallika@gmail.com",
+    "Password": "password",
+	"RoleName":"Admin"
+}
+
+
+
+
  https://localhost:44302/api/posts
 
   This is for Post

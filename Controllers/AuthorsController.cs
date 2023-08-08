@@ -13,6 +13,7 @@ using BlogWebAPI.Models;
 
 namespace BlogWebAPI.Controllers
 {
+    [RoutePrefix("api/[controller]")]
     public class AuthorsController : ApiController
     {
         private DatabaseContext db = new DatabaseContext();

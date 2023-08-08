@@ -192,29 +192,19 @@
     <Compile Include="Controllers\AuthorsController.cs" />
     <Compile Include="Controllers\BlogController.cs" />
     <Compile Include="Controllers\CommentsController.cs" />
+    <Compile Include="Controllers\ResultsController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Extensions\OwinContextExtensions.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202308080634360_Migration 1.cs" />
-    <Compile Include="Migrations\202308080634360_Migration 1.designer.cs">
-      <DependentUpon>202308080634360_Migration 1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202308080642509_UserSeedData.cs" />
-    <Compile Include="Migrations\202308080642509_UserSeedData.designer.cs">
-      <DependentUpon>202308080642509_UserSeedData.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202308080647130_tes.cs" />
-    <Compile Include="Migrations\202308080647130_tes.designer.cs">
-      <DependentUpon>202308080647130_tes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202308080649331_testing.cs" />
-    <Compile Include="Migrations\202308080649331_testing.designer.cs">
-      <DependentUpon>202308080649331_testing.cs</DependentUpon>
+    <Compile Include="Migrations\202308081054116_Test11.cs" />
+    <Compile Include="Migrations\202308081054116_Test11.designer.cs">
+      <DependentUpon>202308081054116_Test11.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Author.cs" />
+    <Compile Include="Models\BlogInformation.cs" />
     <Compile Include="Models\BlogPost.cs" />
     <Compile Include="Models\Comments.cs" />
     <Compile Include="Models\User.cs" />
@@ -366,17 +356,8 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202308080634360_Migration 1.resx">
-      <DependentUpon>202308080634360_Migration 1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202308080642509_UserSeedData.resx">
-      <DependentUpon>202308080642509_UserSeedData.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202308080647130_tes.resx">
-      <DependentUpon>202308080647130_tes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202308080649331_testing.resx">
-      <DependentUpon>202308080649331_testing.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202308081054116_Test11.resx">
+      <DependentUpon>202308081054116_Test11.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

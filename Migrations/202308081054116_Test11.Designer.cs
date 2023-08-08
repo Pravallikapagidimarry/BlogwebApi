@@ -7,13 +7,13 @@ namespace BlogWebAPI.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class testing : IMigrationMetadata
+    public sealed partial class Test11 : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(testing));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Test11));
         
         string IMigrationMetadata.Id
         {
-            get { return "202308080649331_testing"; }
+            get { return "202308081054116_Test11"; }
         }
         
         string IMigrationMetadata.Source

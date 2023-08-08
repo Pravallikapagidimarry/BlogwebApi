@@ -13,8 +13,10 @@ namespace BlogWebAPI.Context
     {
         public DatabaseContext() : base("DefaultConnection")
         {
-           //Database.SetInitializer<DatabaseContext>(new UserSeedDataDBInitializer<DatabaseContext>());
-            Database.SetInitializer<DatabaseContext>(new SeedDataDBInitializer<DatabaseContext>());
+          // Database.SetInitializer<DatabaseContext>(new UserSeedDataDBInitializer<DatabaseContext>());
+           // Database.SetInitializer<DatabaseContext>(new SeedDataDBInitializer<DatabaseContext>());
+
+            Database.SetInitializer<DatabaseContext>(new CreateDatabaseIfNotExists<DatabaseContext>());
 
         }
 
@@ -23,7 +25,7 @@ namespace BlogWebAPI.Context
         public DbSet<Comments> PostComments { get; set; }
         public DbSet<User> Users { get; set; }
 
-        private class UserSeedDataDBInitializer<T> : DropCreateDatabaseIfModelChanges<DatabaseContext>
+        private class SeedDataDBInitializer<T> : DropCreateDatabaseAlways<DatabaseContext>
         {
             protected override void Seed(DatabaseContext context)
             {
@@ -31,15 +33,7 @@ namespace BlogWebAPI.Context
                 foreach (User user in users)
                     context.Users.Add(user);
                 base.Seed(context);
-                context.SaveChanges();
 
-            }
-        }
-        private class SeedDataDBInitializer<T> : DropCreateDatabaseAlways<DatabaseContext>
-        {
-            protected override void Seed(DatabaseContext context)
-            {
-               
                 List<Author> authors = GetSeedDataAuthorDetails();
                 foreach (Author author in authors)
                     context.Authors.Add(author);
@@ -50,6 +44,8 @@ namespace BlogWebAPI.Context
                 foreach (Comments comment in postcomment)
                     context.PostComments.Add(comment);
                 base.Seed(context);
+                context.SaveChanges();
+
 
             }
         }
@@ -90,11 +86,16 @@ namespace BlogWebAPI.Context
             authors.Add(new Author()
             {
                 AuthorId = 1,
-                UserId = 2
+                UserId = 1
             });
             authors.Add(new Author()
             {
                 AuthorId = 2,
+                UserId = 2
+            });
+            authors.Add(new Author()
+            {
+                AuthorId = 3,
                 UserId = 3
             });
 
@@ -147,7 +148,7 @@ namespace BlogWebAPI.Context
             comment.Add(new Comments()
             {
                 CommentId = 2,
-                Description = "Test Comment2 on  Post2",
+                Description = "Test Comment2 on  Post1",
                 PostId = 1
 
             });
