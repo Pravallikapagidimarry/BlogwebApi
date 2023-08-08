@@ -11,7 +11,6 @@ namespace BlogWebAPI.Models
         public string Title { get; set; }
         public string Summary { get; set; }
         public string Body { get; set; }
-        public Author Author { get; set; }
         public int AuthorId { get; set; }
         public string[] Tags { get; set; }
     }

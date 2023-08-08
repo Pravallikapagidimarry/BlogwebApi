@@ -28,7 +28,7 @@ namespace BlogWebAPI.Provider
                     var claims = new List<Claim>()
                     {
                         new Claim(ClaimTypes.Name, user.Name),
-                        new Claim("UserID", user.Id)
+                        new Claim("UserID", Convert.ToString(user.Id))
                     };
                     ClaimsIdentity oAuthIdentity = new ClaimsIdentity(claims, Startup.oAuthOptions.AuthenticationType);
                     context.Validated(new AuthenticationTicket(oAuthIdentity, new AuthenticationProperties() { }));

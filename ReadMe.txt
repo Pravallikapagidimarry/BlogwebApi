@@ -26,6 +26,8 @@ Microsoft.AspNet.WebApi.Owin
 
  The sample json for the Post man 
  https://localhost:44302/api/posts
+
+  This is for Post
  {
     "BlogPostId": 2,
     "Title": "Example post",

@@ -18,10 +18,11 @@ namespace BlogWebAPI
             }
             user = new User()
             {
-                Id = "1",
+                Id = 1,
                 Email = "mail2saru28@gmail.com",
                 Password = "password",
                 Name = "Sarvani",
+                RoleName = "admin",
             };
             if (user != null)
             {
